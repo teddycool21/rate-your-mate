@@ -1,5 +1,5 @@
 input.onButtonPressed(Button.AB, function () {
-    for (let index = 0; index < 5; index++) {
+    for (let index = 0; index < 2; index++) {
         basic.showLeds(`
             . # # # #
             . . . . #
@@ -22,21 +22,28 @@ input.onButtonPressed(Button.AB, function () {
             . # # # .
             . . # . .
             `)
-        basic.pause(1000)
-        basic.clearScreen()
-        basic.pause(1000)
     } else {
-        basic.showLeds(`
-            . # . # .
-            . # . # .
-            . . . . .
-            . # # # .
-            # . . . #
-            `)
-        basic.pause(1000)
-        basic.clearScreen()
-        basic.pause(1000)
+        if (rating < 25) {
+            basic.showLeds(`
+                # . . . #
+                . # . # .
+                . . # . .
+                . # . # .
+                # . . . #
+                `)
+        } else {
+            basic.showLeds(`
+                . # . # .
+                . # . # .
+                . . . . .
+                . # # # .
+                # . . . #
+                `)
+        }
     }
+    basic.pause(1000)
+    basic.clearScreen()
+    basic.pause(1000)
     basic.showLeds(`
         . . . . .
         . # . # .
