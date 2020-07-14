@@ -17,11 +17,25 @@ input.onButtonPressed(Button.AB, function () {
     if (rating > 75) {
         basic.showLeds(`
             . # . # .
-            # . # . #
-            # . . . #
-            . # . # .
+            # # # # #
+            # # # # #
+            . # # # .
             . . # . .
             `)
+        basic.pause(1000)
+        basic.clearScreen()
+        basic.pause(1000)
+    } else {
+        basic.showLeds(`
+            . # . # .
+            . # . # .
+            . . . . .
+            . # # # .
+            # . . . #
+            `)
+        basic.pause(1000)
+        basic.clearScreen()
+        basic.pause(1000)
     }
     basic.showLeds(`
         . . . . .
